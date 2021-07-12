@@ -12,7 +12,7 @@ namespace ISites
 {
     public partial class MainWindow : Form
     {
-        string VersionPO = "ISites.exe v1.0";
+        string VersionPO = "ISites.exe v1.0"; 
 
         public MainWindow()
         {
