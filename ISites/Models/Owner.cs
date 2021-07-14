@@ -8,20 +8,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ISites.Models
 {
-    public class Country
+    public class Owner
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public string Code_A2 { get; set; }
-        [Required]
-        public string Code_A3 { get; set; }
-        public int Code_Num { get; set; }
+        public string Code { get; set; }
         [Required]
         public string Name { get; set; }
-        public string Name_RU { get; set; }
-        public string Currency { get; set; }
 
-        public List<Owner> Owners { get; set; } = new List<Owner>(); 
+        public int CountryId { get; set; }
+        public Country Country { get; set; }
     }
 }

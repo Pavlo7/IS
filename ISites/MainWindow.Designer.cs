@@ -76,6 +76,8 @@ namespace ISites
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            this.toolStripMenuItemCountries.Click += new System.EventHandler(this.toolStripMenuItemCountries_Click);
+
         }
 
         #endregion
@@ -83,6 +85,8 @@ namespace ISites
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBooks;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCountries;
+
+        
     }
 }
 

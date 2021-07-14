@@ -29,21 +29,38 @@ namespace ISites
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridViewCountries = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCountries)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridViewCountries
+            // 
+            this.dataGridViewCountries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCountries.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewCountries.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewCountries.Name = "dataGridViewCountries";
+            this.dataGridViewCountries.RowTemplate.Height = 25;
+            this.dataGridViewCountries.Size = new System.Drawing.Size(800, 450);
+            this.dataGridViewCountries.TabIndex = 0;
             // 
             // RepoCountries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridViewCountries);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RepoCountries";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Справочник стран";
+            this.Load += new System.EventHandler(this.RepoCountries_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCountries)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridViewCountries;
     }
 }
