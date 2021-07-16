@@ -39,7 +39,7 @@ namespace ISites
           //  using (ApplicationContext db = new ApplicationContext(options))
           //  {
                 // получаем объекты из бд и выводим на консоль
-                var countries = _context.Countries.ToList();
+                var countries = _context.Country.ToList();
 
                 dataGridViewCountries.DataSource = countries;
                

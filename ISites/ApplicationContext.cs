@@ -13,14 +13,20 @@ namespace ISites
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<Country> Countries { get; set; }
-        public DbSet<Owner> Owners { get; set; }
+        public DbSet<Country> Country { get; set; }
+        public DbSet<Owner> Owner { get; set; }
+        public DbSet<Issuer> Issuer { get; set; }
+        public DbSet<Pos> Pos { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<IssuerProduct> IssuerProduct { get; set; }
+        public DbSet<PosIssuer> PosIssuer { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-            Database.SetCommandTimeout(1500000);
-            //Database.EnsureCreated();
-            //Database.EnsureDeleted();
+          //  Database.SetCommandTimeout(1500000);
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
+            
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
