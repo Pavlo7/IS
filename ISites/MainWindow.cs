@@ -44,6 +44,9 @@ namespace ISites
                 .Options;
 
             _context = new ApplicationContext(options);
+
+            RepoInitial rI = new RepoInitial(_context);
+            rI.Initial();
         }
 
         private void toolStripMenuItemCountries_Click(object sender, EventArgs e)
@@ -63,6 +66,41 @@ namespace ISites
             wnd.Show();
             wnd.Activate();
         }
-      
+
+        private void toolStripMenuItemIssuers_Click(object sender, EventArgs e)
+        {
+            RepoIssuers wnd = null;
+
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is RepoIssuers)
+                    wnd = f as RepoIssuers;
+            }
+
+            if (wnd == null)
+                wnd = new RepoIssuers(_context);
+
+            wnd.MdiParent = this;
+            wnd.Show();
+            wnd.Activate();
+        }
+
+        private void toolStripMenuItemPoses_Click(object sender, EventArgs e)
+        {
+            RepoPoses wnd = null;
+
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is RepoPoses)
+                    wnd = f as RepoPoses;
+            }
+
+            if (wnd == null)
+                wnd = new RepoPoses(_context);
+
+            wnd.MdiParent = this;
+            wnd.Show();
+            wnd.Activate();
+        }
     }
 }

@@ -24,15 +24,13 @@ namespace ISites
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
           //  Database.SetCommandTimeout(1500000);
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+          //  Database.EnsureDeleted();
+          //  Database.EnsureCreated();
             
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
-
               //optionsBuilder.UseSqlServer();
         }
 

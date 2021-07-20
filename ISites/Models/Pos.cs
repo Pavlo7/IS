@@ -13,12 +13,12 @@ namespace ISites.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public string PosCode { get; set; }
+        public int PosCode { get; set; }
         [Required]
         public string PosName { get; set; }
         public int OwnerId { get; set; }
         public Owner Owner { get; set; }
 
-        public List<Issuer> Issuers { get; set; } = new List<Issuer>();
+        //public List<Issuer> Issuers { get; set; } = new List<Issuer>();
     }
 }

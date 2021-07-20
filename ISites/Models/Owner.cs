@@ -13,9 +13,9 @@ namespace ISites.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public string Code { get; set; }
+        public int OwnerCode { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string OwnerName { get; set; }
 
         public int CountryId { get; set; }
         public Country Country { get; set; }

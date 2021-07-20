@@ -32,6 +32,12 @@ namespace ISites
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemCountries = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemIssuers = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemOwners = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemPoses = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +54,13 @@ namespace ISites
             // toolStripMenuItemBooks
             // 
             this.toolStripMenuItemBooks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemCountries});
+            this.toolStripMenuItemCountries,
+            this.toolStripMenuItemIssuers,
+            this.toolStripMenuItemProducts,
+            this.toolStripSeparator1,
+            this.toolStripMenuItemOwners,
+            this.toolStripSeparator2,
+            this.toolStripMenuItemPoses});
             this.toolStripMenuItemBooks.Name = "toolStripMenuItemBooks";
             this.toolStripMenuItemBooks.Size = new System.Drawing.Size(94, 20);
             this.toolStripMenuItemBooks.Text = "Справочники";
@@ -56,8 +68,45 @@ namespace ISites
             // toolStripMenuItemCountries
             // 
             this.toolStripMenuItemCountries.Name = "toolStripMenuItemCountries";
-            this.toolStripMenuItemCountries.Size = new System.Drawing.Size(116, 22);
+            this.toolStripMenuItemCountries.Size = new System.Drawing.Size(135, 22);
             this.toolStripMenuItemCountries.Text = "Страны";
+            this.toolStripMenuItemCountries.Click += new System.EventHandler(this.toolStripMenuItemCountries_Click);
+            // 
+            // toolStripMenuItemIssuers
+            // 
+            this.toolStripMenuItemIssuers.Name = "toolStripMenuItemIssuers";
+            this.toolStripMenuItemIssuers.Size = new System.Drawing.Size(135, 22);
+            this.toolStripMenuItemIssuers.Text = "Эмитенты";
+            this.toolStripMenuItemIssuers.Click += new System.EventHandler(this.toolStripMenuItemIssuers_Click);
+            // 
+            // toolStripMenuItemProducts
+            // 
+            this.toolStripMenuItemProducts.Name = "toolStripMenuItemProducts";
+            this.toolStripMenuItemProducts.Size = new System.Drawing.Size(135, 22);
+            this.toolStripMenuItemProducts.Text = "Продукты";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(132, 6);
+            // 
+            // toolStripMenuItemOwners
+            // 
+            this.toolStripMenuItemOwners.Name = "toolStripMenuItemOwners";
+            this.toolStripMenuItemOwners.Size = new System.Drawing.Size(135, 22);
+            this.toolStripMenuItemOwners.Text = "Владельцы";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(132, 6);
+            // 
+            // toolStripMenuItemPoses
+            // 
+            this.toolStripMenuItemPoses.Name = "toolStripMenuItemPoses";
+            this.toolStripMenuItemPoses.Size = new System.Drawing.Size(135, 22);
+            this.toolStripMenuItemPoses.Text = "Станции";
+            this.toolStripMenuItemPoses.Click += new System.EventHandler(this.toolStripMenuItemPoses_Click);
             // 
             // MainWindow
             // 
@@ -76,8 +125,6 @@ namespace ISites
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            this.toolStripMenuItemCountries.Click += new System.EventHandler(this.toolStripMenuItemCountries_Click);
-
         }
 
         #endregion
@@ -85,8 +132,12 @@ namespace ISites
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBooks;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCountries;
-
-        
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemIssuers;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemProducts;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemOwners;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemPoses;
     }
 }
 

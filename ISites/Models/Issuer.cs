@@ -13,6 +13,8 @@ namespace ISites.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
+        public int IssuerCode { get; set; }
+        [Required]
         public string IssuerName { get; set; }
 
         public List<Pos> Poses { get; set; } = new List<Pos>();
