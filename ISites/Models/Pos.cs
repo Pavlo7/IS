@@ -19,6 +19,7 @@ namespace ISites.Models
         public int OwnerId { get; set; }
         public Owner Owner { get; set; }
 
+
         //public List<Issuer> Issuers { get; set; } = new List<Issuer>();
     }
 }
