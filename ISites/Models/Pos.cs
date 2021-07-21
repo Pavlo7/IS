@@ -18,6 +18,7 @@ namespace ISites.Models
         public string PosName { get; set; }
         public int OwnerId { get; set; }
         public Owner Owner { get; set; }
+        public string Adress { get; set; }
 
         //public List<Issuer> Issuers { get; set; } = new List<Issuer>();
     }

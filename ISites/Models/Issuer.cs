@@ -17,6 +17,6 @@ namespace ISites.Models
         [Required]
         public string IssuerName { get; set; }
 
-        public List<Pos> Poses { get; set; } = new List<Pos>();
+        //public List<Pos> Poses { get; set; } = new List<Pos>();
     }
 }
