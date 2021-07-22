@@ -33,17 +33,17 @@ namespace ISites
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewPoses = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewPosIssuer = new System.Windows.Forms.DataGridView();
-            this.IssuerProduct = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridViewIssuerProduct = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPoses)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPosIssuer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IssuerProduct)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIssuerProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,6 +81,20 @@ namespace ISites
             this.panel2.Size = new System.Drawing.Size(602, 570);
             this.panel2.TabIndex = 3;
             // 
+            // dataGridViewPoses
+            // 
+            this.dataGridViewPoses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPoses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewPoses.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewPoses.MultiSelect = false;
+            this.dataGridViewPoses.Name = "dataGridViewPoses";
+            this.dataGridViewPoses.ReadOnly = true;
+            this.dataGridViewPoses.RowTemplate.Height = 25;
+            this.dataGridViewPoses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewPoses.Size = new System.Drawing.Size(600, 568);
+            this.dataGridViewPoses.TabIndex = 0;
+            this.dataGridViewPoses.SelectionChanged += new System.EventHandler(this.dataGridViewPoses_SelectionChanged);
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -91,26 +105,6 @@ namespace ISites
             this.panel3.Size = new System.Drawing.Size(331, 220);
             this.panel3.TabIndex = 4;
             // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.IssuerProduct);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(817, 244);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(331, 350);
-            this.panel4.TabIndex = 5;
-            // 
-            // dataGridViewPoses
-            // 
-            this.dataGridViewPoses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPoses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewPoses.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewPoses.Name = "dataGridViewPoses";
-            this.dataGridViewPoses.RowTemplate.Height = 25;
-            this.dataGridViewPoses.Size = new System.Drawing.Size(600, 568);
-            this.dataGridViewPoses.TabIndex = 0;
-            // 
             // dataGridViewPosIssuer
             // 
             this.dataGridViewPosIssuer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -118,18 +112,31 @@ namespace ISites
             this.dataGridViewPosIssuer.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewPosIssuer.Name = "dataGridViewPosIssuer";
             this.dataGridViewPosIssuer.RowTemplate.Height = 25;
+            this.dataGridViewPosIssuer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPosIssuer.Size = new System.Drawing.Size(329, 218);
             this.dataGridViewPosIssuer.TabIndex = 1;
+            this.dataGridViewPosIssuer.SelectionChanged += new System.EventHandler(this.dataGridViewPosIssuer_SelectionChanged);
             // 
-            // IssuerProduct
+            // panel4
             // 
-            this.IssuerProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.IssuerProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IssuerProduct.Location = new System.Drawing.Point(0, 0);
-            this.IssuerProduct.Name = "IssuerProduct";
-            this.IssuerProduct.RowTemplate.Height = 25;
-            this.IssuerProduct.Size = new System.Drawing.Size(329, 348);
-            this.IssuerProduct.TabIndex = 2;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dataGridViewIssuerProduct);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(817, 244);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(331, 350);
+            this.panel4.TabIndex = 5;
+            // 
+            // dataGridViewIssuerProduct
+            // 
+            this.dataGridViewIssuerProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewIssuerProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewIssuerProduct.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewIssuerProduct.Name = "dataGridViewIssuerProduct";
+            this.dataGridViewIssuerProduct.RowTemplate.Height = 25;
+            this.dataGridViewIssuerProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewIssuerProduct.Size = new System.Drawing.Size(329, 348);
+            this.dataGridViewIssuerProduct.TabIndex = 2;
             // 
             // RepoPoses
             // 
@@ -148,11 +155,11 @@ namespace ISites
             this.Text = "Справочник Станций";
             this.Load += new System.EventHandler(this.RepoPoses_Load);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPoses)).EndInit();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPosIssuer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IssuerProduct)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIssuerProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +175,6 @@ namespace ISites
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridViewPosIssuer;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView IssuerProduct;
+        private System.Windows.Forms.DataGridView dataGridViewIssuerProduct;
     }
 }
